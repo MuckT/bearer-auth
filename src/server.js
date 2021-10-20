@@ -12,11 +12,16 @@ const authRoutes = require('./auth/routes')
 // Prepare the express app
 const app = express()
 
-// App Level MW
+// App Level Middleware
 app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// Bad route
+app.get('/bad', (req, res, next) => {
+  next('you\'ve messed up')
+});
 
 // Routes
 app.use(authRoutes)

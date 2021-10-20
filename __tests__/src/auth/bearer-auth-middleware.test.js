@@ -19,7 +19,7 @@ afterAll(async (done) => {
   done()
 })
 
-describe('Auth Middleware', () => {
+describe.skip('Auth Middleware', () => {
   // Mock the express req/res/next that we need for each middleware call
   const req = {}
   const res = {

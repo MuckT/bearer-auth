@@ -10,7 +10,7 @@
     "db:create": "sequelize db:create",
     "watch": "nodemon index.js",
     "test-watch": "NODE_ENV=test jest --watchAll",
-    "test": "NODE_ENV=test jest --coverage"
+    "test": "NODE_ENV=test jest --coverage --silent"
   },
   "jest": {
     "testEnvironment": "node"
@@ -34,7 +34,7 @@
     "encoding": "^0.1.13"
   },
   "devDependencies": {
-    "jest": "^27.2.4",
+    "jest": "^27.3.0",
     "supertest": "^6.1.6",
     "sqlite3": "blubaustin/node-sqlite3"
   }
