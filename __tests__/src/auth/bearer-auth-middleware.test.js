@@ -45,7 +45,7 @@ describe.skip('Auth Middleware', () => {
     it('logs in a user with a proper token', () => {
 
       const user = { username: 'admin' }
-      const token = jwt.sign(user, process.env.SECRET)
+      const token = jwt.sign(user, process.env.SECRET, { expiresIn: '1h' })
 
       req.headers = {
         authorization: `Bearer ${token}`,
